@@ -1,28 +1,38 @@
-# Garmin eTrex (Recent Models) Practical Guide
+# Garmin eTrex SE Practical Guide
 
-This repository is a practical reference for using a **recent Garmin eTrex** model (for example: eTrex 22x/32x/SE/Solar generation) for geocaching trips.
+This repository is a practical reference for using **your Garmin eTrex SE** for geocaching trips.
 
-> Menu labels differ slightly by model/firmware, but workflows below are the same.
+> This guide is intentionally tuned to eTrex SE behavior and menus.
 
-## 1) First: identify your exact model and firmware
+## 1) Device Identity and Firmware Baseline
 
-On the device:
+On the device, open:
 - `Setup` -> `About` (or `System` -> `About`)
-- Record:
-  - Model name
-  - Software version
 
-Why this matters: USB mode names, geocache menu names, and sync options vary by model.
+Record:
+- Software version
+- Any visible hardware or unit identifiers
+
+Why this matters: firmware version affects menu labels and what is shown on the About screen.
+
+### Confirmed Device Record (2026-10-05)
+
+- Model: eTrex SE (confirmed by Garmin iPhone app over Bluetooth)
+- Serial number: 82P048706
+- Firmware observed: 5.11
+- Note: About screen may omit model information on this firmware; app-side identification confirms device identity.
 
 ---
 
-## 2) How to connect eTrex to a computer (for downloads/uploads)
+## 2) How to Connect eTrex to a Computer (for Downloads/Uploads)
+
+For eTrex SE, phone sync over Bluetooth is usually the primary workflow, with USB as a file-management fallback.
 
 1. Use a **data-capable USB cable** (many charge-only cables fail here).
 2. Connect eTrex to your computer USB port.
 3. Power on eTrex if needed.
 4. If prompted on device, choose **Mass Storage** / **File Transfer** mode.
-5. Wait for the device to appear as a removable drive (sometimes with a separate microSD volume).
+5. Wait for the device to appear as a removable drive.
 6. Open the Garmin storage and use:
    - `/Garmin/GPX/` for geocache GPX files
    - `/Garmin/` for system folders (do not edit unknown files)
@@ -32,9 +42,19 @@ Safe disconnect:
 
 ---
 
-## 3) Load destination geocaches *before* a trip (published caches)
+## 3) Load Destination Geocaches *Before* a Trip (Published Caches)
 
-## Method A: GPX file workflow (works broadly)
+## Method A: Bluetooth App Sync (Recommended for eTrex SE)
+
+1. In the Garmin iPhone app/ecosystem, build the geocache list or collection you want for the trip.
+2. Keep phone + eTrex SE connected over Bluetooth.
+3. Run a sync before leaving home.
+4. On the eTrex SE, open geocache lists and confirm target caches are present.
+5. Repeat one final sync after any last-minute list edits.
+
+Why this is preferred on eTrex SE: app sync is the most direct way to confirm device identity and keep trip content aligned with your phone.
+
+## Method B: GPX File Workflow (USB Fallback)
 
 1. On geocaching.com, create/export a GPX for your destination area (Pocket Query or list export).
 2. Connect eTrex via USB.
@@ -46,18 +66,11 @@ Tips:
 - Use smaller regional GPX files if indexing is slow.
 - Keep file names date-based (example: `utah-trip-2026-10.gpx`).
 
-## Method B: Garmin mobile sync models
-
-For models that support Garmin Explore/Connect sync:
-1. Build your collection/list in Garmin ecosystem.
-2. Sync while on Wi-Fi/cellular *before travel*.
-3. Confirm caches/maps are present on device in airplane/no-signal conditions.
-
 ---
 
-## 4) Reviewer use case: unpublished/on-hold listings offline
+## 4) Reviewer Use Case: Unpublished/On-Hold Listings Offline
 
-Goal: carry reviewer-relevant listings on eTrex with no field data signal.
+Goal: carry reviewer-relevant listings on eTrex SE with no field data signal.
 
 Typical approach:
 1. Export reviewer-authorized listing data/GPX from reviewer tooling (where your role permits).
@@ -71,9 +84,9 @@ Important:
 
 ---
 
-## 5) Configuration options to set before geocaching trips
+## 5) Configuration Options to Set Before Geocaching Trips
 
-Create/adjust a geocaching profile (names vary by model):
+Create or adjust a geocaching profile on eTrex SE:
 
 - **Units/Format**
   - Position format and map datum (match your workflow)
@@ -81,18 +94,18 @@ Create/adjust a geocaching profile (names vary by model):
 - **Routing**
   - Activity profile (hiking/walking)
   - Route recalculation behavior
-- **Map**
+- **Map/Navigation View**
   - Orientation (north up vs track up)
   - Detail level
   - Dashboard/data fields (distance to cache, bearing, ETA)
-- **Geocaching options**
+- **Geocaching Options**
   - Filter by difficulty/terrain/size/type
   - Found/not found visibility
-- **Power/display**
+- **Power/Display**
   - Backlight timeout
   - Battery type selection
   - Battery saver mode
-- **Sensors (if available)**
+- **Sensors (if Available)**
   - Compass calibration
   - Altimeter/barometer calibration
 
@@ -105,9 +118,9 @@ Pre-trip checklist:
 
 ---
 
-## 6) Common key/menu sequences for field geocaching
+## 6) Common Key/Menu Sequences for Field Geocaching
 
-Because some newer eTrex units are button-driven and others are touch-driven, use these common navigation patterns:
+eTrex SE is button-driven, so these are optimized for button navigation patterns:
 
 - Find loaded caches:
   - `Geocaching` -> `Search`/`Nearest`/`Filter`
@@ -143,13 +156,62 @@ If your model has programmable shortcuts, bind one to:
   - Put phone in airplane mode.
   - Power-cycle eTrex.
   - Confirm target caches still open with full details.
+- About Screen Missing Model Name:
+  - If firmware is 5.11, this can be a UI issue.
+  - Confirm identity in the Garmin iPhone app over Bluetooth.
+  - Keep firmware version + serial in the service history table.
 
 ---
 
-## 8) Suggested folder hygiene on device
+## 8) Suggested Folder Hygiene on Device
 
 - Keep active trip GPX files only.
 - Archive old GPX files off-device after each trip.
 - Use clear file naming by destination + date.
+- Keep one "current trip" list in the mobile app to reduce sync confusion.
 
 This keeps indexing faster and avoids duplicate cache entries.
+
+---
+
+## 9) Service History
+
+Use this log to track firmware updates, resets, and notable behavior changes.
+
+| Date | Firmware | Model shown in About | App-detected model | Notes |
+|---|---|---|---|---|
+| 2026-10-05 | 5.11 | Missing/blank on About screen | eTrex SE | Garmin iPhone app over Bluetooth confirms model; serial 82P048706. |
+
+---
+
+## 10) Clear Previously Loaded Geocaches Before Adding More
+
+Use one of these methods depending on how caches were loaded.
+
+## Method A: Clear Through Bluetooth App Sync (Preferred)
+
+1. In the Garmin iPhone app/ecosystem, remove old geocache lists or collections from the sync set.
+2. Keep phone + eTrex SE connected over Bluetooth.
+3. Run sync.
+4. On eTrex SE, open geocache list and confirm old entries are gone.
+
+This is the safest first option because it keeps phone and device aligned.
+
+## Method B: USB GPX Deep-Clean (When Old Caches Persist)
+
+1. Connect eTrex SE to computer in file transfer mode.
+2. Open `/Garmin/GPX/`.
+3. Back up the folder to your computer before deleting anything.
+4. Delete previously copied trip GPX files from `/Garmin/GPX/`.
+5. Eject/unmount safely, then reboot eTrex SE.
+6. Recheck geocache list to confirm it is cleared.
+
+Safety notes:
+- Do not delete unknown files outside `/Garmin/GPX/`.
+- If unsure about a GPX file, move it to a backup folder on computer instead of permanent deletion.
+
+## Reload Workflow After Clearing
+
+1. Confirm geocache list is empty or only contains entries you want to keep.
+2. Load the new trip set using app sync or fresh GPX files.
+3. Verify sample caches open with full details before heading out.
